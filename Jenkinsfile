@@ -4,6 +4,11 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
+
+     tools {
+        // Define a Node.js installation named 'node'
+        nodejs "node"
+    }
     
     stages {
         stage('Build Docker Image') {
